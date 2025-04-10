@@ -3,6 +3,7 @@
   <head>
     <title>XP.css example</title>
     <meta charset="UTF-8" />
+
     <!-- Windows XP Theme (include only one theme at a time) -->
     <link rel="stylesheet" href="https://unpkg.com/xp.css" />
     <style>
@@ -12,18 +13,19 @@
         background-size: cover;
         font-family: Tahoma;
       }
-
+    </style>
+    <style>
       .slideshow-container {
         display: flex;
         align-items: center;
         justify-content: center;
         gap: 8px;
-        height: 600px;
+        height: 450px;
       }
 
       .slideshow-container img {
-        width: 800px;
-        height: 600px;
+        width: 300px;
+        height: 450px;
         object-fit: contain;
         border: 2px inset #ccc;
       }
@@ -50,7 +52,6 @@
         </div>
       </div>
     </center>
-
     <div class="window" style="width: 300px">
       <div class="title-bar">
         <div class="title-bar-text">About Me</div>
@@ -66,7 +67,7 @@
         <button>Block</button>
       </div>
     </div>
-    
+
     <div class="window" style="width: 320px">
       <div class="title-bar">
         <div class="title-bar-text">More Stuff</div>
@@ -84,10 +85,15 @@
         <div id="slideshow-area" style="margin-top: 6px;">
           <div style="display: flex; flex-direction: column; align-items: center; gap: 4px;">
             <button class="button" id="prev" style="padding: 2px 6px; font-size: 10px;">⏫</button>
-            <img id="slideshow" src="" alt="Loading..." width="160" height="120" style="border: 2px inset #ccc;">
+            <img id="slideshow" src="" alt="Loading..." width="240" height="320" style="border: 2px inset #ccc;">
             <button class="button" id="next" style="padding: 2px 6px; font-size: 10px;">⏬</button>
           </div>
         </div>
+      </div>
+      <div class="status-bar">
+        <p class="status-bar-field"></p>
+        <p class="status-bar-field"></p>
+        <p class="status-bar-field"> </p>
       </div>
     </div>
 
@@ -114,36 +120,49 @@
     </div>
 
     <script>
-      const imgEl = document.getElementById("slideshow");
-      const prevBtn = document.getElementById("prev");
-      const nextBtn = document.getElementById("next");
-
-      // Array of image paths
+      // Array of Imgur image URLs (replace these with your own Imgur links)
       const images = [
-        "latestpix/image1.jpg",
-        "latestpix/image2.png",
-        "latestpix/image3.gif"
+        "https://i.imgur.com/Yhd5KlL.jpeg", 
+        "https://i.imgur.com/2obh26K.jpeg",
+        "https://i.imgur.com/gfmXA0L.jpeg", 
+        "https://i.imgur.com/jIbLI0u.jpeg",  
+        "https://i.imgur.com/LyL60dy.jpeg", 
+        "https://i.imgur.com/Rit3Tyi.jpeg",  
+        "https://i.imgur.com/xPvteaR.jpeg", 
       ];
+
       let index = 0;
 
-      // Initialize slideshow
-      if (images.length > 0) {
+      // Get references to the elements
+      const imgEl = document.getElementById('slideshow');
+      const prevBtn = document.getElementById('prev');
+      const nextBtn = document.getElementById('next');
+
+      // Function to update the image source
+      function updateImage() {
         imgEl.src = images[index];
-      } else {
-        imgEl.alt = "No images found!";
       }
 
-      // Next button functionality
+      // Initialize with the first image
+      updateImage();
+
+      // Event listener for "next" button (down arrow)
       nextBtn.addEventListener("click", () => {
-        index = (index + 1) % images.length;
-        imgEl.src = images[index];
+        index = (index + 1) % images.length; // Move to the next image
+        updateImage();
       });
 
-      // Previous button functionality
+      // Event listener for "previous" button (up arrow)
       prevBtn.addEventListener("click", () => {
-        index = (index - 1 + images.length) % images.length;
-        imgEl.src = images[index];
+        index = (index - 1 + images.length) % images.length; // Move to the previous image
+        updateImage();
       });
+
+      // Optional: Auto cycle through the images every 3 seconds
+      setInterval(() => {
+        index = (index + 1) % images.length; // Move to the next image
+        updateImage();
+      }, 3000); // Change image every 3 seconds (3000ms)
     </script>
   </body>
 </html>
