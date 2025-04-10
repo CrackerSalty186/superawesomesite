@@ -19,17 +19,43 @@
         </div>
         <div class="window-body">
           <p>he/they • skinny twink • tech slut • born to slay, forced to school</p>
-          <!-- Your trigger button -->
-<button onclick="showDialog()">Launch Link Dialog</button>
+          <!-- XP Button -->
+<button class="xp-button" onclick="showDialog()">Open Link Dialog</button>
 
-<!-- Dialog box -->
-<div id="linkDialog" style="display:none; position:fixed; top:0; left:0; width:100%; height:100%; background-color:rgba(0,0,0,0.6); z-index:999;">
-  <div style="background:white; padding:20px; border-radius:10px; width:300px; margin:15% auto; text-align:center;">
-    <p>Pick your destiny 😌</p>
-    <button onclick="window.location.href='https://example.com'">Go to Example.com</button>
-    <button onclick="window.location.href='myapp://custom-uri'">Launch App URI</button>
-    <br><br>
-    <button onclick="closeDialog()">Cancel</button>
+<!-- XP Dialog -->
+<div id="linkDialog" class="window" style="display:none; position:fixed; top:20%; left:calc(50% - 150px); width:300px; z-index:999;">
+  <div class="title-bar">
+    <div class="title-bar-text">Choose an Option</div>
+    <div class="title-bar-controls">
+      <button aria-label="Close" onclick="closeDialog()"></button>
+    </div>
+  </div>
+  <div class="window-body">
+    <p>Where do you wanna go?</p>
+    <div class="field-row" style="justify-content: center;">
+      <button onclick="window.location.href='https://example.com'">🌐 Example.com</button>
+      <button onclick="window.location.href='myapp://custom-uri'">🪄 Open App</button>
+    </div>
+    <div class="field-row" style="justify-content: center; margin-top: 1em;">
+      <button onclick="closeDialog()">Cancel</button>
+    </div>
+  </div>
+</div>
+
+<!-- XP CSS from Unpkg -->
+<link rel="stylesheet" href="https://unpkg.com/xp.css" />
+
+<!-- Script -->
+<script>
+  function showDialog() {
+    document.getElementById('linkDialog').style.display = 'block';
+  }
+
+  function closeDialog() {
+    document.getElementById('linkDialog').style.display = 'none';
+  }
+</script>
+
   </div>
 </div>
 
