@@ -11,7 +11,7 @@
   <body>
     <div class="window" style="width: 300px">
         <div class="title-bar">
-          <div class="title-bar-text">A Window With Stuff In It</div>
+          <div class="title-bar-text">About Me</div>
           <div class="title-bar-controls">
             <button aria-label="Minimize"></button>
             <button aria-label="Close"></button>
@@ -19,7 +19,30 @@
         </div>
         <div class="window-body">
           <p>he/they • skinny twink • tech slut • born to slay, forced to school</p>
-          <a href="aim:GoIM?Screenname=glitterbabyxoxo"><button>Add Me</button></a>
+          <!-- Your trigger button -->
+<button onclick="showDialog()">Launch Link Dialog</button>
+
+<!-- Dialog box -->
+<div id="linkDialog" style="display:none; position:fixed; top:0; left:0; width:100%; height:100%; background-color:rgba(0,0,0,0.6); z-index:999;">
+  <div style="background:white; padding:20px; border-radius:10px; width:300px; margin:15% auto; text-align:center;">
+    <p>Pick your destiny 😌</p>
+    <button onclick="window.location.href='https://example.com'">Go to Example.com</button>
+    <button onclick="window.location.href='myapp://custom-uri'">Launch App URI</button>
+    <br><br>
+    <button onclick="closeDialog()">Cancel</button>
+  </div>
+</div>
+
+<!-- Script -->
+<script>
+  function showDialog() {
+    document.getElementById('linkDialog').style.display = 'block';
+  }
+
+  function closeDialog() {
+    document.getElementById('linkDialog').style.display = 'none';
+  }
+</script>
         </div>
       </div>
   </body>
