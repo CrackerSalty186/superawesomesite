@@ -14,6 +14,28 @@
     font-family: Tahoma;
   }
 </style>
+<style>
+  .slideshow-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    height: 600px;
+  }
+
+  .slideshow-container img {
+    width: 800px;
+    height: 600px;
+    object-fit: contain;
+    border: 2px inset #ccc;
+  }
+
+  .slideshow-button {
+    height: 600px;
+    font-size: 24px;
+    padding: 0 10px;
+  }
+</style>
   </head>
 
   <body>
@@ -28,7 +50,7 @@
       <div class="window-body">
         <marquee behavior="scroll" direction="left">💿✨ Welcome to my website!! AIM me @ glitterbabyxoxo 💜✨</marquee>
       </div>
-</center>
+    </center>
     </div>
     <div class="window" style="width: 300px">
         <div class="title-bar">
@@ -57,9 +79,15 @@
         <p><strong>Status:</strong> <img src="http://api.nina.chat/presence/icon?k=n1KtWhKwrmBoOc9V&t=glitterbabyxoxo"></p>
         <p>🎵 Now Playing</p>
         <script src="https://recentfm.rknight.me/now.js?u=mintyfreshg1"></script>
-        <p>💽 Latest Pix</p>
-        <img src="https://www.transparenttextures.com/patterns/debut-light.png" alt="To Be Dated">
         <a href="https://www.ultraguest.com/view/1732913742"><button>Sign my guestbook!</button></a>
+        <p>💽 Latest Pix</p>
+        <div id="slideshow-area" style="margin-top: 6px;">
+          <div style="display: flex; flex-direction: column; align-items: center; gap: 4px;">
+            <button class="button" id="prev" style="padding: 2px 6px; font-size: 10px;">⏫</button>
+            <img id="slideshow" src="" alt="Loading..." width="160" height="120" style="border: 2px inset #ccc;">
+            <button class="button" id="next" style="padding: 2px 6px; font-size: 10px;">⏬</button>
+          </div>
+        </div>
       </div>
       <div class="status-bar">
         <p class="status-bar-field"></p>
@@ -88,6 +116,6 @@
           <a href="https://spotify.com" target="_blank"><img src="images\Social Media and Phone Icons\style-ios6\Spotify.png" alt="Spotify"  width="40" height="40"/></a>
         </div>
       </div>
-
-  </body>
+      <script src="slideshow.js"></script>
+</body>
 </html>
