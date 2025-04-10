@@ -17,6 +17,20 @@
         overflow-x: hidden;
       }
 
+      /* Centered marquee window */
+      .centered-window {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-top: 50px;
+      }
+
+      /* Other windows align as per default position */
+      .window {
+        max-width: 95vw;
+        margin: 10px;
+      }
+
       .slideshow-container {
         display: flex;
         align-items: center;
@@ -36,12 +50,6 @@
         height: 600px;
         font-size: 24px;
         padding: 0 10px;
-      }
-
-      /* Responsive window */
-      .window {
-        max-width: 95vw;
-        margin: 10px auto;
       }
 
       /* Toggle button */
@@ -106,19 +114,22 @@
       </div>
     </center>
 
-    <div class="window" style="width: 300px">
-      <div class="title-bar">
-        <div class="title-bar-text">About Me</div>
-        <div class="title-bar-controls">
-          <button aria-label="Minimize"></button>
-          <button aria-label="Close"></button>
+    <!-- Centered marquee window -->
+    <div class="centered-window">
+      <div class="window" style="width: 300px">
+        <div class="title-bar">
+          <div class="title-bar-text">About Me</div>
+          <div class="title-bar-controls">
+            <button aria-label="Minimize"></button>
+            <button aria-label="Close"></button>
+          </div>
         </div>
-      </div>
-      <div class="window-body">
-        <p>he/they • skinny twink • tech slut • born to slay, forced to school</p>
-        <a href="aim:addbuddy?Screenname=glitterbabyxoxo"><button>Add Me</button></a>
-        <a href="aim:goim?Screenname=glitterbabyxoxo"><button>Message</button></a>
-        <button>Block</button>
+        <div class="window-body">
+          <p>he/they • skinny twink • tech slut • born to slay, forced to school</p>
+          <a href="aim:addbuddy?Screenname=glitterbabyxoxo"><button>Add Me</button></a>
+          <a href="aim:goim?Screenname=glitterbabyxoxo"><button>Message</button></a>
+          <button>Block</button>
+        </div>
       </div>
     </div>
 
