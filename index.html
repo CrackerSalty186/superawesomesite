@@ -25,10 +25,14 @@
         margin-top: 50px;
       }
 
-      /* Other windows align as per default position */
+      /* Make windows resize with screen size */
       .window {
         max-width: 95vw;
+        width: auto;
+        height: auto;
         margin: 10px;
+        resize: both;
+        overflow: auto;
       }
 
       .slideshow-container {
@@ -114,7 +118,8 @@
       </div>
     </center>
 
-
+    <!-- Centered marquee window -->
+    <div class="centered-window">
       <div class="window" style="width: 300px">
         <div class="title-bar">
           <div class="title-bar-text">About Me</div>
@@ -130,6 +135,7 @@
           <button>Block</button>
         </div>
       </div>
+    </div>
 
     <div class="window" style="width: 320px">
       <div class="title-bar">
