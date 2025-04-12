@@ -1,0 +1,8 @@
+body {
+/* background-image: url(https://i.pinimg.com/736x/b6/17/d1/b617d1ec08dce2851336198e8537481b.jpg); */
+background-color: rgb(94, 163, 82);
+}
+
+h1, h2, h3, h4, h5, li, p {
+    color: rgb(45, 104, 80);
+}
