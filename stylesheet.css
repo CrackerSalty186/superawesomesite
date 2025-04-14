@@ -1,0 +1,79 @@
+body {
+    background-image: url(https://www.wallpaperhub.app/_next/image?url=https%3A%2F%2Fcdn.wallpaperhub.app%2Fcloudcache%2Fb%2Fd%2F7%2F6%2F4%2Fb%2Fbd764bb25d49a05105060185774ba14cd2c846f7.jpg&w=4500&q=100);
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-family: Tahoma;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+  }
+
+  /* Centered marquee window */
+  .centered-window {
+    display: flex;
+    align-items: left;
+    justify-content: left;
+    margin-top: 50px;
+  }
+
+  /* Other windows align as per default position */
+  .window {
+    max-width: 95vw;
+    margin: 10px;
+  }
+
+  .slideshow-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    height: 450px;
+  }
+
+  .slideshow-container img {
+    width: 300px;
+    height: 450px;
+    object-fit: contain;
+    border: 2px inset #ccc;
+  }
+
+  .slideshow-button {
+    height: 600px;
+    font-size: 24px;
+    padding: 0 10px;
+  }
+
+  /* Toggle button */
+  #toggle-music {
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    z-index: 999;
+    font-family: Tahoma;
+    font-size: 12px;
+    padding: 6px 12px;
+    border: 2px outset #ccc;
+    background: #e0e0e0;
+    cursor: pointer;
+    border-radius: 3px;
+  }
+
+  /* XP Button Style */
+  .xp-button {
+    background-color: #d3d3d3;
+    border: 2px solid #aaa;
+    border-radius: 3px;
+    padding: 5px 10px;
+    font-family: "Microsoft Sans Serif", sans-serif;
+    font-size: 12px;
+    cursor: pointer;
+  }
+
+  .xp-button:active {
+    background-color: #a1a1a1;
+    border-color: #888;
+  }
+
+  .xp-button:focus {
+    outline: none;
+  }
